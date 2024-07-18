@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>bare-metal_app_pwm_hw_nucleo-F103rb</name>
+=======
+	<name>bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb</name>
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 	<comment></comment>
 	<projects>
 	</projects>

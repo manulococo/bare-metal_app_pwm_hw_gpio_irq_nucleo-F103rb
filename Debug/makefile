@@ -35,34 +35,57 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
+<<<<<<< HEAD
 BUILD_ARTIFACT_NAME := bare-metal_app_pwm_hw_nucleo-F103rb
+=======
+BUILD_ARTIFACT_NAME := bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
+<<<<<<< HEAD
 bare-metal_app_pwm_hw_nucleo-F103rb.elf \
 
 MAP_FILES += \
 bare-metal_app_pwm_hw_nucleo-F103rb.map \
+=======
+bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.elf \
+
+MAP_FILES += \
+bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.map \
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
+<<<<<<< HEAD
 bare-metal_app_pwm_hw_nucleo-F103rb.list \
+=======
+bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.list \
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 
 
 # All Target
 all: main-build
 
 # Main-build Target
+<<<<<<< HEAD
 main-build: bare-metal_app_pwm_hw_nucleo-F103rb.elf secondary-outputs
 
 # Tool invocations
 bare-metal_app_pwm_hw_nucleo-F103rb.elf bare-metal_app_pwm_hw_nucleo-F103rb.map: $(OBJS) $(USER_OBJS) C:\Users\lococ\OneDrive\ -\ fi.uba.ar\Fiuba\Taller\ de\ Sistemas\ Embebidos\Workspace\Ejemplos\ de\ Clase\bare-metal_app_pwm_hw_nucleo-F103rb\bare-metal_app_pwm_hw_nucleo-F103rb\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "bare-metal_app_pwm_hw_nucleo-F103rb.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\lococ\OneDrive - fi.uba.ar\Fiuba\Taller de Sistemas Embebidos\Workspace\Ejemplos de Clase\bare-metal_app_pwm_hw_nucleo-F103rb\bare-metal_app_pwm_hw_nucleo-F103rb\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bare-metal_app_pwm_hw_nucleo-F103rb.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+=======
+main-build: bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.elf secondary-outputs
+
+# Tool invocations
+bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.elf bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.map: $(OBJS) $(USER_OBJS) C:\Users\lococ\OneDrive\ -\ fi.uba.ar\Fiuba\Taller\ de\ Sistemas\ Embebidos\Workspace\Ejemplos\ de\ Clase\bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb\bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\lococ\OneDrive - fi.uba.ar\Fiuba\Taller de Sistemas Embebidos\Workspace\Ejemplos de Clase\bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb\bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -71,14 +94,23 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+<<<<<<< HEAD
 bare-metal_app_pwm_hw_nucleo-F103rb.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "bare-metal_app_pwm_hw_nucleo-F103rb.list"
+=======
+bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.list"
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
+<<<<<<< HEAD
 	-$(RM) bare-metal_app_pwm_hw_nucleo-F103rb.elf bare-metal_app_pwm_hw_nucleo-F103rb.list bare-metal_app_pwm_hw_nucleo-F103rb.map default.size.stdout
+=======
+	-$(RM) bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.elf bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.list bare-metal_app_pwm_hw_gpio_irq_nucleo-F103rb.map default.size.stdout
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

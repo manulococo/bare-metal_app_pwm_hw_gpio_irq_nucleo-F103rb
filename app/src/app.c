@@ -52,7 +52,11 @@
 
 #define DUTY_CYCLE_MIN	0u
 #define DUTY_CYCLE_MAX	200u
+<<<<<<< HEAD
 #define DUTY_CYCLE_INC	(DUTY_CYCLE_MAX/10)
+=======
+#define DUTY_CYCLE_INC	(DUTY_CYCLE_MAX/20)
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 
 /********************** internal data declaration ****************************/
 
@@ -60,11 +64,19 @@
 
 /********************** internal data definition *****************************/
 const char *p_sys	= " Bare Metal - Event-Triggered Systems (ETS)\r\n";
+<<<<<<< HEAD
 const char *p_app	= " App - PWM HW\r\n";
+=======
+const char *p_app	= " App - PWM HW & GPIO IRQ\r\n";
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 
 /********************** external data declaration *****************************/
 uint32_t g_app_cnt;
 volatile uint32_t g_tick_cnt;
+<<<<<<< HEAD
+=======
+volatile uint32_t duty_cycle;
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 
 /********************** external functions definition ************************/
 void app_init(void)
@@ -82,6 +94,10 @@ void app_init(void)
 	LOGGER_LOG(" %s = %d\r\n", GET_NAME(g_app_cnt), (int)g_app_cnt);
 
 	/* Start timer */
+<<<<<<< HEAD
+=======
+	duty_cycle = DUTY_CYCLE_MIN;
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 }
 
@@ -99,8 +115,11 @@ void app_init(void)
  */
 void app_update(void)
 {
+<<<<<<< HEAD
 	uint32_t duty_cycle = DUTY_CYCLE_MAX;
 
+=======
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 	/* Update App Counter */
 	g_app_cnt++;
 
@@ -111,6 +130,7 @@ void app_update(void)
 	/* Print out: Application execution counter */
 	LOGGER_LOG(" %s = %d\r\n", GET_NAME(g_app_cnt), (int)g_app_cnt);
 
+<<<<<<< HEAD
 	for (;;)
 	{
         while (DUTY_CYCLE_MAX > duty_cycle)
@@ -126,6 +146,9 @@ void app_update(void)
             HAL_Delay(100);
         }
 	}
+=======
+	for (;;);
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 }
 
 void HAL_SYSTICK_Callback(void)
@@ -142,4 +165,26 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   }
 }
 
+<<<<<<< HEAD
+=======
+/* Callback in non blocking modes (Interrupt and DMA) */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+
+	// Check which version of the gpio triggered this callback
+	if (GPIO_Pin == BTN_A_PIN)
+	{
+        if (DUTY_CYCLE_MAX > duty_cycle)
+        {
+            TIM2->CCR1 = duty_cycle;
+            duty_cycle += DUTY_CYCLE_INC;
+        }
+        else
+        {
+            duty_cycle = DUTY_CYCLE_MIN;
+        }
+	}
+}
+
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
 /********************** end of file ******************************************/

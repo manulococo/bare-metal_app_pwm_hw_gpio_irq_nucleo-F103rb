@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 ../app/src/app.c:70:6:app_init	1
 ../app/src/app.c:100:6:app_update	3
 ../app/src/app.c:131:6:HAL_SYSTICK_Callback	1
 ../app/src/app.c:137:6:HAL_TIM_PeriodElapsedCallback	1
+=======
+../app/src/app.c:71:6:app_init	1
+../app/src/app.c:102:6:app_update	1
+../app/src/app.c:117:6:HAL_SYSTICK_Callback	1
+../app/src/app.c:123:6:HAL_TIM_PeriodElapsedCallback	1
+../app/src/app.c:132:6:HAL_GPIO_EXTI_Callback	3
+>>>>>>> 5972a3b308b4f9cec8a918b99b3c71970705e51a
