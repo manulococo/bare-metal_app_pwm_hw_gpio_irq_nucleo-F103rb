@@ -1,0 +1,4 @@
+../app/src/app.c:70:6:app_init	24	static,ignoring_inline_asm
+../app/src/app.c:100:6:app_update	32	static,ignoring_inline_asm
+../app/src/app.c:131:6:HAL_SYSTICK_Callback	4	static
+../app/src/app.c:137:6:HAL_TIM_PeriodElapsedCallback	16	static

@@ -1,0 +1,4 @@
+../app/src/app.c:70:6:app_init	1
+../app/src/app.c:100:6:app_update	3
+../app/src/app.c:131:6:HAL_SYSTICK_Callback	1
+../app/src/app.c:137:6:HAL_TIM_PeriodElapsedCallback	1
